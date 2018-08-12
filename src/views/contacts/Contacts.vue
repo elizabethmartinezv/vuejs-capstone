@@ -10,17 +10,19 @@
       </div>
       <h3>{{ contact.first_name}} {{ contact.last_name}}</h3>
       <p>{{ contact.phone_number }}</p>
-      <h2>Edit:</h2>
-      <div>
-        <input type="text" v-model="updatedFirstName" :placeholder="contact.first_name">
-      </div>
-      <div>
-        <input type="text" v-model="updatedLastName" :placeholder="contact.last_name">
-      </div>
-      <div>
-        <input type="text" v-model="updatedPhoneNumber":placeholder="contact.phone_number"></div>
-      <div>
-        <button v-on:click="updatePrimaryContact(contact)">Save Changes</button>
+      <p v-on:click="contact.edit_visible = !contact.edit_visible">Click to Edit</p>
+      <div v-if="contact.edit_visible">
+        <div>
+          <input type="text" v-model="updatedFirstName" :placeholder="contact.first_name">
+        </div>
+        <div>
+          <input type="text" v-model="updatedLastName" :placeholder="contact.last_name">
+        </div>
+        <div>
+          <input type="text" v-model="updatedPhoneNumber":placeholder="contact.phone_number"></div>
+        <div>
+          <button v-on:click="updateContact(contact)">Save Changes</button>
+        </div>
       </div>
     </div>
 
@@ -38,7 +40,8 @@ export default {
       contacts: [],
       updatedFirstName: "",
       updatedLastName: "",
-      updatedPhoneNumber: ""
+      updatedPhoneNumber: "",
+      edit_visible: ""
     };
   },
   created: function() {
@@ -50,7 +53,7 @@ export default {
     );
   },
   methods: {
-    updatePrimaryContact: function(contact) {
+    updateContact: function(contact) {
       var params = {
         first_name: this.updatedFirstName,
         last_name: this.updatedLastName,

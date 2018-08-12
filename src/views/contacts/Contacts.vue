@@ -32,7 +32,6 @@
 
 <script>
 import axios from "axios";
-
 export default {
   data: function() {
     return {
@@ -57,9 +56,7 @@ export default {
         last_name: this.updatedLastName,
         phone_number: this.updatedPhoneNumber
       };
-
       Object.keys(params).forEach(key => !params[key] && delete params[key]);
-
       axios
         .patch("http://localhost:3000/api/contacts/" + contact.id, params)
         .then(

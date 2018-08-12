@@ -6,6 +6,8 @@ import Login from "./views/users/Login.vue";
 import Logout from "./views/users/Logout.vue";
 import CreateContact from "./views/contacts/CreateContact.vue";
 import Contacts from "./views/contacts/Contacts.vue";
+import CreateRoute from "./views/routes/CreateRoute.vue";
+import Routes from "./views/routes/Routes.vue";
 
 Vue.use(Router);
 
@@ -40,6 +42,16 @@ export default new Router({
       path: "/contacts",
       name: "contacts",
       component: Contacts
+    },
+    {
+      path: "/routes/create",
+      name: "createRoute",
+      component: CreateRoute
+    },
+    {
+      path: "/routes",
+      name: "routes",
+      component: Routes
     },
     {
       path: "/about",

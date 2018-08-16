@@ -2,9 +2,17 @@
   <div class="routes">
     <h1>My Routes</h1>
     <div v-for="route in routes">
-      <h2>{{ route.name }}</h2>
-      <div>STARTING LOCATION: {{ route.starting_address }}</div>
-      DESTINATION: {{ route.ending_address }}
+      <h3>{{ route.name }}</h3>
+      <div>
+        STARTING LOCATION: {{ route.starting_address }}
+      </div>
+      <div>
+        DESTINATION: {{ route.ending_address }}
+      </div>
+      <div>
+        {{ route.status}}
+      </div>
+      <a v-bind:href=" '/#/routes/' + route.id ">More info</a>
     </div>
   </div>
 </template>

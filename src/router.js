@@ -8,6 +8,7 @@ import CreateContact from "./views/contacts/CreateContact.vue";
 import Contacts from "./views/contacts/Contacts.vue";
 import CreateRoute from "./views/routes/CreateRoute.vue";
 import Routes from "./views/routes/Routes.vue";
+import RoutesShow from "./views/routes/RoutesShow.vue";
 
 Vue.use(Router);
 
@@ -54,13 +55,9 @@ export default new Router({
       component: Routes
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+      path: "/routes/:id",
+      name: "routes-show",
+      component: RoutesShow
     }
   ]
 });

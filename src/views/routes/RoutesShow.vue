@@ -37,7 +37,7 @@ export default {
       });
   },
   mounted: function() {
-    L.mapquest.key = "process.env.VUE_APP_MAPQUEST_CONSUMER_KEY";
+    L.mapquest.key = process.env.VUE_APP_MAPQUEST_CONSUMER_KEY;
 
     var map = L.mapquest.map("map", {
       center: [41.881832, -87.623177],

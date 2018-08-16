@@ -1601,20 +1601,20 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: #c39d6d;
+  color: #8c928e;
 }
 
 .navbar-default .navbar-nav > li > a:focus {
-  color: #c39d6d !important;
+  color:  #8c928e !important;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-  color: #c39d6d;
+  color:  #8c928e;
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
-  color: #c39d6d;
+  color:  #8c928e;
   background-color: transparent;
 }
 

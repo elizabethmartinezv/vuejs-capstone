@@ -1,6 +1,16 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
+    <!-- header-banner -->
+    <div id="header-banner" class="demo-4">
+        <div class="banner-content text-center">
+            <div class="banner-border">
+                <div class="banner-info">
+                    <h1>VIVID</h1>
+                </div><!-- / banner-info -->
+            </div><!-- / banner-border -->
+        </div><!-- / banner-content -->
+    </div>
+    <!-- / header-banner -->
   </div>
 </template>
 
@@ -11,7 +21,7 @@
 export default {
   data: function() {
     return {
-      message: "App Name"
+      message: "Hello"
     };
   },
   created: function() {},

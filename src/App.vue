@@ -16,7 +16,8 @@
               <div class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
                       <li class="active"><a href="/"><span>HOME</span></a></li>
-                      <li><a href="about.html"><span>ABOUT</span></a></li>
+                      <li><a href="/#/contacts"><span>CONTACTS</span></a></li>
+                      <li><a href="/#/routes"><span>ROUTES</span></a></li>
                       <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>BLOG</span> <span class="dropdown-icon"></span></a>
                       <ul class="dropdown-menu animated zoomIn fast">
@@ -41,16 +42,10 @@
                           <li><a href="single-project-3.html"><span>SINGLE PROJECT 3</span></a></li>
                       </ul>
                       </li>
-                      <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>PAGES</span> <span class="dropdown-icon"></span></a>
-                      <ul class="dropdown-menu animated zoomIn fast">
-                          <li><a href="about2.html"><span>ABOUT 2</span></a></li>
-                          <li><a href="contact2.html"><span>CONTACT 2</span></a></li>
-                          <li><a href="404.html"><span>404 PAGE</span></a></li>
-                          <li><a href="components.html"><span>COMPONENTS</span></a></li>
-                      </ul>
-                      </li>
-                      <li><a href="contact.html"><span>CONTACT</span></a></li>
+                      <li><a href="about.html"><span>ABOUT</span></a></li>
+                      <li v-if="!loggedIn"><a href="/#/login"><span>LOGIN</span></a></li>
+                      <li v-if="!loggedIn"><a href="/#/signup"><span>SIGNUP</span></a></li>
+                      <li v-if="loggedIn"><a href="/#/logout"><span>LOGOUT</span></a></li>
                   </ul>
               </div><!--/ nav-collapse -->
           </div><!-- / container -->
@@ -73,3 +68,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  data: function() {
+    return {
+      loggedIn: false
+    };
+  },
+  created: function() {
+    this.loggedIn = localStorage.getItem("jwt");
+  },
+  methods: {},
+  computed: {}
+};
+</script>

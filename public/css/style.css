@@ -1531,7 +1531,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
-  color: #c39d6d;
+  color: #8fc9d7;
   background-color: transparent;
 }
 
@@ -1601,20 +1601,20 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: #8c928e;
+  color: #8fc9d7;
 }
 
 .navbar-default .navbar-nav > li > a:focus {
-  color:  #8c928e !important;
+  color:  #8fc9d7 !important;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-  color:  #8c928e;
+  color:  #8fc9d7;
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
-  color:  #8c928e;
+  color:  #8fc9d7;
   background-color: transparent;
 }
 
@@ -1977,7 +1977,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .portfolio-filter a {
-  color: #666666;
+  color: #000000;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -1988,13 +1988,13 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .portfolio-filter a.active {
-  color: #c39d6d;
+  color: #8fc9d7;
   background-color: transparent;
   border: 2px solid transparent;
 }
 
 .portfolio-filter a:hover {
-  color: #c39d6d;
+  color: #8fc9d7;
   background-color: transparent;
   border: 2px solid transparent;
 }
@@ -2031,7 +2031,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .project .img-bg-color.primary {
-  background: #c39d6d;
+  background: #8fc9d7;
 }
 
 .project .img-bg-color.default {
@@ -2187,21 +2187,21 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 /* End Hover Effect */
 /* Portfolio with Info Box */
 #portfolio.info-box .portfolio-filter a.active {
-  color: #c39d6d;
+  color: #8fc9d7;
   background-color: transparent;
-  border: 2px solid #c39d6d;
+  border: 2px solid #8fc9d7;
 }
 
 #portfolio.info-box .portfolio-filter a.active:hover {
   color: white;
-  background-color: #c39d6d;
-  border: 2px solid #c39d6d;
+  background-color: #8fc9d7;
+  border: 2px solid #8fc9d7;
 }
 
 #portfolio.info-box .portfolio-filter a:hover {
   color: white;
-  background-color: #c39d6d;
-  border: 2px solid #c39d6d;
+  background-color: #8fc9d7;
+  border: 2px solid #8fc9d7;
 }
 
 #portfolio.info-box .project-details {
@@ -2869,7 +2869,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .contact-icon i {
-  color: #c39d6d;
+  color: #8fc9d7;
   font-size: 25px;
 }
 
@@ -3343,7 +3343,7 @@ footer .social a {
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover {
-    color: #c39d6d;
+    color: #8fc9d7;
     background-color: transparent;
   }
 
@@ -3356,7 +3356,7 @@ footer .social a {
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
-    color: #c39d6d;
+    color: #8fc9d7;
     background-color: transparent;
   }
 

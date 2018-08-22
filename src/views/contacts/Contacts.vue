@@ -1,29 +1,49 @@
 <template>
   <div class="contacts">
-    <h1>Contacts</h1>
-    <div v-for="contact in contacts"> 
-      <div v-if="contact.primary === true">
-        <h1>Primary</h1>
-      </div>
-      <div v-else>
-        <h1>Emergency</h1>
-      </div>
-      <h3>{{ contact.first_name}} {{ contact.last_name}}</h3>
-      <p>{{ contact.phone_number }}</p>
-      <p v-on:click="contact.edit_visible = !contact.edit_visible">Click to Edit</p>
-      <div v-if="contact.edit_visible">
-        <div>
-          <input type="text" v-model="updatedFirstName" :placeholder="contact.first_name">
-        </div>
-        <div>
-          <input type="text" v-model="updatedLastName" :placeholder="contact.last_name">
-        </div>
-        <div>
-          <input type="text" v-model="updatedPhoneNumber":placeholder="contact.phone_number"></div>
-        <div>
-          <button v-on:click="updateContact(contact)">Save Changes</button>
-        </div>
-      </div>
+
+    <div class="container">
+
+      <section id="blog">
+          <div class="container">
+              <div class="page-header no-margin text-center">
+                  <h2>CONTACTS</h2>
+              </div>
+              <p class="text-center">Sed imperdiet vitae ipsum a tincidunt. Vivamus id ligula turpis. Duis viverra arcu quis.</p>
+              <div class="row">
+
+                  <!-- post-block -->
+                  <div class="col-sm-4" v-for="contact in contacts">
+                      <div class="post-block">
+                          <a ><img src="images/post-img.jpg" alt=""></a>
+                          <div class="small-post-text">
+                              <h5><a>{{ contact.first_name}} {{ contact.last_name}}</a></h5>
+                              <p class="small-post-meta"v-if="contact.primary === true">PRIMARY</p>
+                              <p class="small-post-meta" v-else>EMERGENCY</p>
+                              <p class="space-bottom">{{ contact.phone_number }}</p>
+                              <p class="small-post-footer">
+                                  <a v-on:click="contact.edit_visible = !contact.edit_visible">EDIT</a>
+                                  <div v-if="contact.edit_visible">
+                                    <div>
+                                      <input type="text" v-model="updatedFirstName" :placeholder="contact.first_name">
+                                    </div>
+                                    <div>
+                                      <input type="text" v-model="updatedLastName" :placeholder="contact.last_name">
+                                    </div>
+                                    <div>
+                                      <input type="text" v-model="updatedPhoneNumber":placeholder="contact.phone_number"></div>
+                                    <div>
+                                      <button v-on:click="updateContact(contact)">Save Changes</button>
+                                    </div>
+                                  </div>
+                              </p>
+                          </div><!-- / small-post-text -->
+                      </div><!-- / post-block -->
+                  </div><!-- / col-md-4 -->
+                  <!-- / post-block -->
+              </div><!-- / row -->
+          </div><!-- / container -->
+      </section>
+
     </div>
 
   </div>

@@ -9,19 +9,6 @@
         </div><!-- / banner-content -->
     </div>
     <!-- / header-banner -->
-    <div v-for="route in routes">
-      <h3>{{ route.name }}</h3>
-      <div>
-        STARTING LOCATION: {{ route.starting_address }}
-      </div>
-      <div>
-        DESTINATION: {{ route.ending_address }}
-      </div>
-      <div>
-        {{ route.status}}
-      </div>
-      <a v-bind:href=" '/#/routes/' + route.id ">More info</a>
-    </div>
 
       <section id="portfolio" class="w-shadow info-box four-col">
           <div class="container">
@@ -67,6 +54,20 @@
           </div><!-- / container -->
 
       </section>
+
+          <div v-for="route in routes">
+      <h3>{{ route.name }}</h3>
+      <div>
+        STARTING LOCATION: {{ route.starting_address }}
+      </div>
+      <div>
+        DESTINATION: {{ route.ending_address }}
+      </div>
+      <div>
+        {{ route.status}}
+      </div>
+      <a v-bind:href=" '/#/routes/' + route.id ">More info</a>
+    </div>
   </div>
 </template>
 

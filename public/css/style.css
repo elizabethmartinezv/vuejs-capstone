@@ -133,11 +133,11 @@ li {
 }
 
 blockquote {
-  border-left: 3px solid #c39d6d;
+  border-left: 3px solid #8fc9d7;
 }
 
 .blockquote-reverse {
-  border-right: 3px solid #c39d6d;
+  border-right: 3px solid #8fc9d7;
 }
 
 blockquote p {
@@ -505,7 +505,7 @@ input:focus {
   transition: all 0.3s ease-in-out;
   border-radius: 0;
   padding: 10px 18px;
-  margin: 5px;
+  margin: 20px;
 }
 
 .btn span {

@@ -1,14 +1,20 @@
 <template>
   <div class="contacts">
+        <!-- header-banner -->
+    <div id="header-banner">
+        <div class="banner-content single-page text-center">
+            <div class="banner-info">
+                <h1>MY CONTACTS</h1>
+            </div><!-- / banner-info -->
+        </div><!-- / banner-content -->
+    </div>
+    <!-- / header-banner -->
 
     <div class="container">
 
       <section id="blog">
           <div class="container">
-              <div class="page-header no-margin text-center">
-                  <h2>CONTACTS</h2>
-              </div>
-              <p class="text-center">Sed imperdiet vitae ipsum a tincidunt. Vivamus id ligula turpis. Duis viverra arcu quis.</p>
+        
               <div class="row">
 
                   <!-- post-block -->
@@ -32,7 +38,7 @@
                                     <div>
                                       <input type="text" v-model="updatedPhoneNumber":placeholder="contact.phone_number"></div>
                                     <div>
-                                      <button v-on:click="updateContact(contact)">Save Changes</button>
+                                      <button class="btn btn-primary" id="center-submit" v-on:click="updateContact(contact)">Save Changes</button>
                                     </div>
                                   </div>
                               </p>
@@ -50,6 +56,9 @@
 </template>
 
 <style>
+#center-submit {
+  margin-left: 83px;
+}
 </style>
 
 <script>

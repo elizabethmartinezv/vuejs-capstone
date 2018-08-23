@@ -15,14 +15,13 @@
               <!-- portfolio filter -->
               <ul class="portfolio-filter list-inline text-center">
                   <li><a href="#" data-group="all" class="active">ALL</a></li>
-                  <li><a href="#" data-group="graphic-design">GRAPHIC DESIGN</a></li>
-                  <li><a href="#" data-group="branding">BRANDING</a></li>
-                  <li><a href="#" data-group="logo-design">LOGO DESIGN</a></li>
-                  <li><a href="#" data-group="illustration">ILLUSTRATION</a></li>
+                  <li><a href="/#/routes/create" data-group="new">NEW</a></li>
+                  <li><a href="#" data-group="saved">SAVED</a></li>
+                  <li><a href="#" data-group="branding">COMPLETED</a></li>
               </ul><!--end portfolio filter -->
               <ul class="row portfolio list-unstyled lightbox" id="grid">
                   <!-- project -->
-                  <li v-for="route in routes" class="col-xs-6 col-md-3 project" data-groups='["illustration"]'>
+                  <li v-for="route in routes" class="col-xs-6 col-md-3 project" data-groups='["all"]'>
                       <div class="img-bg-color primary">
                           <a href="single-project.html" class="project-link"></a>
                           <!-- / project-link -->
@@ -54,20 +53,6 @@
           </div><!-- / container -->
 
       </section>
-
-          <div v-for="route in routes">
-      <h3>{{ route.name }}</h3>
-      <div>
-        STARTING LOCATION: {{ route.starting_address }}
-      </div>
-      <div>
-        DESTINATION: {{ route.ending_address }}
-      </div>
-      <div>
-        {{ route.status}}
-      </div>
-      <a v-bind:href=" '/#/routes/' + route.id ">More info</a>
-    </div>
   </div>
 </template>
 

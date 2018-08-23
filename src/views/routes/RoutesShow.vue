@@ -17,7 +17,9 @@
 
       <div id="map"></div>
 
-      <button id="change-position" type="button" class="btn btn-default" v-on:click="sendStartingMessage()">START ROUTE</button>
+      <button id="change-position" type="button" class="btn btn-primary" v-if="route.status === 'created'" v-on:click="sendStartingMessage()">START ROUTE</button>
+      <button id="change-position" type="button" class="btn btn-primary" v-if="route.status === 'started'"v-on:click="sendEndingMessage()">END ROUTE</button>
+      <button id="change-position" type="button" class="btn btn-primary" v-if="route.status === 'completed'"v-on:click="sendStartingMessage()">RESTART ROUTE</button>
     </div>
   </div>
 </template>
@@ -110,9 +112,32 @@ export default {
 
       axios
         .patch("http://localhost:3000/api/routes/" + this.route.id, params)
+        .then(
+          function(response) {
+            console.log(response.data);
+            this.route.status = response.data.status;
+          }.bind(this)
+        );
+    },
+    sendEndingMessage: function() {
+      var params = {
+        status: "completed"
+      };
+
+      axios
+        .get("http://localhost:3000/api/ending_message")
         .then(function(response) {
           console.log(response.data);
         });
+
+      axios
+        .patch("http://localhost:3000/api/routes/" + this.route.id, params)
+        .then(
+          function(response) {
+            console.log(response.data);
+            this.route.status = response.data.status;
+          }.bind(this)
+        );
     }
   },
   computed: {}

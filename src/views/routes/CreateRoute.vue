@@ -1,24 +1,26 @@
 <template>
   <div class="createRoute">
-    <h1>Create a Route</h1>
-    <form v-on:submit.prevent="submit()">
-        <ul>
-          <li class="text-danger" v-for="error in errors">{{ error }}</li>
-        </ul>
-        <div class="form-group">
-          <label>Name (optional):</label>
-          <input type="text" class="form-control" v-model="name">
-        </div>
-        <div class="form-group">
-          <label>Starting Address:</label> 
-          <input type="text" class="form-control" v-model="startingAddress">
-        </div>
-        <div class="form-group">
-          <label>Ending Address:</label>
-          <input type="text" class="form-control" v-model="endingAddress">
-        </div>
-        <input type="submit" class="btn btn-primary" value="Submit">
-      </form>
+    <div class="container">
+      <h1>NEW ROUTE</h1>
+      <form v-on:submit.prevent="submit()">
+          <ul>
+            <li class="text-danger" v-for="error in errors">{{ error }}</li>
+          </ul>
+          <div class="form-group">
+            <label>NAME (OPTIONAL)</label>
+            <input type="text" class="form-control" v-model="name">
+          </div>
+          <div class="form-group">
+            <label>STARTING ADDRESS</label> 
+            <input type="text" class="form-control" v-model="startingAddress">
+          </div>
+          <div class="form-group">
+            <label>ENDING ADDRESS</label>
+            <input type="text" class="form-control" v-model="endingAddress">
+          </div>
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
   </div>
 </template>
 

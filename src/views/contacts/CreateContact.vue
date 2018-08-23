@@ -2,38 +2,38 @@
   <div class="createContact">
     <div class="container">
       <form v-on:submit.prevent="submitPrimary()">
-        <h1>Add Contacts</h1>
-        <h1>Primary:</h1>
+        <h1>NEW CONTACT</h1>
+        <h3>PRIMARY</h3>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
         <div class="form-group">
-          <label>First Name:</label> 
+          <label>FIRST NAME</label> 
           <input type="text" class="form-control" v-model="primaryFirstName">
         </div>
         <div class="form-group">
-          <label>Last Name:</label>
+          <label>LAST NAME</label>
           <input type="text" class="form-control" v-model="primaryLastName">
         </div>
         <div class="form-group">
-          <label>Phone Number:</label>
+          <label>PHONE NUMBER</label>
           <input type="text" class="form-control" v-model="primaryPhoneNumber">
         </div>
         <input type="submit" class="btn btn-primary" value="Submit">
       </form>
 
       <form v-on:submit.prevent="submitEmergency()">
-        <h1>Emergency:</h1>
+        <h3>EMERGENCY</h3>
         <div class="form-group">
-          <label>First Name:</label> 
+          <label>FIRST NAME</label> 
           <input type="text" class="form-control" v-model="emergencyFirstName">
         </div>
         <div class="form-group">
-          <label>Last Name:</label>
+          <label>LAST NAME</label>
           <input type="text" class="form-control" v-model="emergencyLastName">
         </div>
         <div class="form-group">
-          <label>Phone Number:</label>
+          <label>PHONE NUMBER</label>
           <input type="text" class="form-control" v-model="emergencyPhoneNumber">
         </div>
         <input type="submit" class="btn btn-primary" value="Submit">
